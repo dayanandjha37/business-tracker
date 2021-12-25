@@ -16,15 +16,15 @@ public class HomeController {
 
 	}
 
-	@RequestMapping("/manager")
-	public String manager() {
-		return "manager";
-
-	}
-
 	@RequestMapping("/admin")
 	public String adminpage() {
 		return "admin";
+
+	}
+
+	@RequestMapping("/manager")
+	public String managerpage() {
+		return "manager";
 
 	}
 

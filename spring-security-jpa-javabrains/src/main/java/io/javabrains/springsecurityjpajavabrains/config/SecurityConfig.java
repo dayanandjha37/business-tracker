@@ -18,10 +18,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private MyUserDetailsService myUserDetailsService;
 
-
-
-	
-
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(myUserDetailsService);
@@ -32,7 +28,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 
 		http.csrf().disable().authorizeRequests()
-		.antMatchers("/secured/**").hasAnyAuthority("ADMIN", "MANAGER", "USER")
+		.antMatchers("/secured/admin/**").hasAnyAuthority("ADMIN")
+		.antMatchers("/secured/manager/**").hasAnyAuthority("ADMIN", "MANAGER")
+		.antMatchers("/secured/**").hasAnyAuthority("ADMIN", "MANAGER","USER")
 		.antMatchers("/").permitAll().and().formLogin()
 		.loginPage("/login").defaultSuccessUrl("/secured/home", true).permitAll().and().logout();
 

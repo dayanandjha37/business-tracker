@@ -4,12 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Home Page</title>
+<title>Registration Successful</title>
 </head>
-<body>
-<center><%@include file="headerafterlogin.jsp" %>
-<h1>Welcome to the Home Page!</h1>
-
+<body><center>
+<%@include file="header.jsp" %>
+<h3>You have successfully registered.</h3><br>
 </center>
 </body>
 </html>

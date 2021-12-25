@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,11 +18,11 @@
 				</tr>
 				<tr>
 					<td>Enter username to set:</td>
-					<td><input type="text" name="uname"></td>
+					<td><input type="text" name="username"></td>
 				</tr>
 				<tr>
 					<td>Enter password to set:</td>
-					<td><input type="text" name="upwd"></td>
+					<td><input type="text" name="password"></td>
 				</tr>
 				<tr>
 					<td>Enter email id:</td>
@@ -31,17 +32,11 @@
 					<td>Enter mobile number:</td>
 					<td><input type="text" name="umobile"></td>
 				</tr>
-				<!-- <tr>
-					<td>Enter uid:</td>
-					<td><input type="text" name="uid"></td>
-				</tr>
-				 -->
-			</table>
-	
-	<br>
 
-	<input type="submit" value="Submit">
-	</form>
+			</table>
+
+			<br> <input type="submit" value="Submit">
+		</form>
 	</center>
 </body>
 </html>
