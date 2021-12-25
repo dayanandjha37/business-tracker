@@ -8,7 +8,7 @@
 </head>
 <body>
 <center><%@include file="headerafterlogin.jsp" %>
-<h1>Welcome to the Home Page!</h1>
+<h1>Welcome to the Home Page.!</h1>
 
 </center>
 </body>
