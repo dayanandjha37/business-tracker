@@ -1,24 +1,13 @@
 package io.javabrains.springsecurityjpajavabrains.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import io.javabrains.springsecurityjpajavabrains.Entity.User;
-import io.javabrains.springsecurityjpajavabrains.dao.UserRepository;
-import io.javabrains.springsecurityjpajavabrains.service.MyUserDetailsService;
 
 @Controller
 @RequestMapping("/secured")
 public class HomeController {
 
-	@Autowired
-	UserRepository repository;
-	@Autowired
-	MyUserDetailsService myUserDetailsService;
 	
-	@Autowired
-	User user;
 	
 	
 	@RequestMapping("/user")
