@@ -15,31 +15,28 @@ public class MyUserDetailsService implements UserDetailsService {
 
 	@Autowired
 	private UserRepository repo;
-	
+
 	@Autowired
 	private PasswordEncoder encoder;
-	
 
-	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
 		User user = repo.findByUsername(username);
-
-		if (user == null)
+		if (user == null) {
 			throw new UsernameNotFoundException(username);
-
+		}
 		return new MyUserDetails(user);
 
 	}
 
 	public User getValidation(User user) {
-		
-		if (!((user.getRname() == "") || (user.getUsername() == "") || (user.getUemail() == "") || (user.getPassword() == "")
-				|| (user.getUmobile() == ""))) {
 
-        user.setPassword(encoder.encode(user.getPassword()));
-	
-			return repo.save(user); 
+		if (!((user.getRname() == "") || (user.getUsername() == "") || (user.getUemail() == "")
+				|| (user.getPassword() == "") || (user.getUmobile() == ""))) {
+
+			user.setPassword(encoder.encode(user.getPassword()));
+
+			return repo.save(user);
 		} else {
 			return null;
 		}

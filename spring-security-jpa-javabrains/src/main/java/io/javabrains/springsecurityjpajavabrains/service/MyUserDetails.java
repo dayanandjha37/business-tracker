@@ -9,24 +9,24 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import io.javabrains.springsecurityjpajavabrains.Entity.User;
 
-public class MyUserDetails implements UserDetails{
+public class MyUserDetails implements UserDetails {
 
 	private User user;
-	
+
 	public MyUserDetails(User user) {
-		this.user=user;
+		this.user = user;
 	}
-	
+
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		
+
 		return Collections.singleton(new SimpleGrantedAuthority(user.getRoles()));
-		
+
 	}
 
 	@Override
 	public String getPassword() {
-	
+
 		return user.getPassword();
 	}
 
@@ -60,4 +60,16 @@ public class MyUserDetails implements UserDetails{
 		return true;
 	}
 
+	public String getRname() {
+		return user.getRname();
+
+	}
+	public String getRoles() {
+
+		return user.getRoles();
+	}
+
+	public String getUmobile() {
+		return user.getUmobile();
+	}
 }

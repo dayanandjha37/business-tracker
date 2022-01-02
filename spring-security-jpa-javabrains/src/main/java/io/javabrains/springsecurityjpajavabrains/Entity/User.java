@@ -18,7 +18,7 @@ public class User {
 	private String username;
 	@Column(nullable = false)
 	private String password;
-	private String roles = "USER";
+	private String roles = "user";
 	private String rname;
 	private String uemail;
 	private String umobile;

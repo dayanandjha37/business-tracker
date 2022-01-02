@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -69,7 +70,8 @@ body {
     <a class="active" href="/secured/home">Home</a>
     <a class="active" href="/secured/videos">Videos</a>
     <a class="active" href="/secured/report">Create Report</a>
-    <a href="#about">About</a>
+    
+    <a class="active" href="/secured/details">${user.rname}</a>
     <a class="active" href="/logout">Logout</a>
   </div>
 </div>
