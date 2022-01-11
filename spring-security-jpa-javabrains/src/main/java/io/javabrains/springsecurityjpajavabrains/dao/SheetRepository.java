@@ -2,8 +2,8 @@
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import io.javabrains.springsecurityjpajavabrains.Entity.Sheet;
+import io.javabrains.springsecurityjpajavabrains.Entity.OrderDetail;
 
-public interface SheetRepository extends JpaRepository<Sheet, Double> {
+public interface SheetRepository extends JpaRepository<OrderDetail, Double> {
 
 }

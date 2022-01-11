@@ -39,7 +39,8 @@ public class HomeController {
 
 	@RequestMapping("/videos")
 	public String videos() {
-
+		
+				
 		return "videos";
 
 	}
@@ -57,5 +58,5 @@ public class HomeController {
 		return "details";
 
 	}
-
+	
 }

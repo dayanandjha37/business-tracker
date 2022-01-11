@@ -8,9 +8,9 @@
 </head>
 <body>
 <center><%@include file="headerafterlogin.jsp" %>
-<form action="">
+<form action="/product/upload" method="post" enctype="multipart/form-data"">
 <p>Click on the "Choose File" button to upload a file:</p>
-  <input type="file" name="filename"><br><br>
+  <input type="file" name="file" accept=".xlsx"><br><br>
   <input type="submit">
   </center>
 </form>

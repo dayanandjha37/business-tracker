@@ -8,7 +8,6 @@ public class SpringSecurityJpaJavabrainsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringSecurityJpaJavabrainsApplication.class, args);
+	
 	}
-
-
-}
+	}
