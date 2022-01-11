@@ -61,7 +61,7 @@ public class Helper {
 
 				OrderDetail s = new OrderDetail();
 				
-				for (int cid = 0; cid <= 7; cid++)
+				for (int cid = 0; cid <= 6; cid++)
 
 //			while (cells.hasNext()) 
 				{
